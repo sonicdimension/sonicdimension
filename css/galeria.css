@@ -1,0 +1,160 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Mínimo de 200px */
+    grid-auto-rows: 200px; /* Altura base para filas */
+    gap: 10px;
+    padding: 10px;
+}
+
+.item {
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.item:hover {
+    transform: scale(1.25);
+}
+
+/* Proporciones ajustadas para acomodar diferentes tipos de imagen */
+.item:nth-child(1) {
+    grid-row: span 2; /* Imagen más alta */
+}
+
+.item:nth-child(2) {
+    grid-row: span 1; /* Imagen estándar */
+}
+
+.item:nth-child(3) {
+    grid-row: span 1; /* Imagen estándar */
+}
+
+.item:nth-child(4) {
+    grid-column: span 2; /* Imagen más ancha */
+}
+
+.item:nth-child(5) {
+    grid-row: span 2; /* Imagen más alta */
+}
+
+.item:nth-child(6) {
+    grid-row: span 1; /* Imagen estándar */
+}
+
+.item:nth-child(7) {
+    grid-row: span 2; /* Imagen más alta */
+}
+
+/* Responsividad: ajustes de tamaño para pantallas más pequeñas */
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-auto-rows: 100px; /* Altura reducida para móviles */
+    }
+
+    .item {
+        grid-row: span 1; /* Todas las imágenes estándar en móviles */
+    }
+}
+
+
+
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .character-card {
+            background-color: #fff820;
+            border-radius: 20px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .character-card:hover {
+            transform: scale(1.05);
+        }
+
+        .character-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            background-color: white;
+            margin-bottom: 20px;
+        }
+
+        .character-name {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .character-description {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .character-attributes {
+            font-size: 0.9em;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .attribute {
+            background-color: #ff4081;
+            border-radius: 10px;
+            padding: 5px 10px;
+            color: white;
+        }
+
+        .ribbon {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: #ff4081;
+            color: white;
+            padding: 10px 20px;
+            transform: rotate(45deg);
+            font-weight: bold;
+        }
+    .imgs {
+        width: 100%; 
+    }
+
+    .button-container {
+        text-align: center;
+      }
+      
+      .animated-button {
+        display: inline-block;
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #007bff;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: transform 0.5s ease, background-color 0.5s ease;
+        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
+      }
+      
+      .animated-button:hover {
+        transform: scale(1.1);
+        background-color: #38b6ff;
+      }

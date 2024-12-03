@@ -1,0 +1,85 @@
+/* Estilos de la barra de navegación estilo vintage */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #2b2b2b;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid #e3a857;
+}
+
+.navbar-item {
+    margin: 0 20px;
+    color: #e3a857;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 8px 15px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Efecto vintage con cambio de color y subrayado animado */
+.navbar-item::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #e3a857;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.navbar-item:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.navbar-item:hover {
+    color: #ffffff;
+    background-color: #e3a857;
+    border-color: #e3a857;
+}
+
+.button-container {
+    text-align: center;
+  }
+  
+  .animated-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .animated-button:hover {
+    transform: scale(1.1);
+    background-color: #38b6ff;
+  }
+  .content {
+    background-color: #38b6ff; /* Fondo blanco para las secciones de contenido */
+    color: #333;
+    padding: 40px 20px;
+    min-height: 20vh; /* Para que no se vean vacías */
+    text-align: center;
+  }
+  
+  .content h2 {
+    font-size: 97px;
+    color: #ffffff; /* Rosa suave */
+  }
+  
+  .content p {
+    font-size: 20px;
+    color: #ffffff;
+  }

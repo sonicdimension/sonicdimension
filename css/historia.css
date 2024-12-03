@@ -1,0 +1,74 @@
+.altura{
+    height: 100vh;
+}
+.mitad{
+    height: 50vh;
+    display: flex;
+    align-items: flex-start; 
+}
+.mitad img {
+    margin-right: 20px; 
+    height: 100;
+    display: block;
+    margin: 0 auto; /* Esto centra la imagen */
+    width: 51%; /* O el tamaño que desees */
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+  .mitad p {
+    flex: 1;
+  }
+.center-text {
+    text-align: center;
+    font-size: 94px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 50px;
+}
+.center {
+    display: block;
+    margin: 20px auto; 
+    font-size: 30px; 
+}
+.text-container {
+    flex: 1; 
+  }
+  .text-container h1 {
+    margin: 20px; 
+    font-size: 50px; 
+    color: rgb(255, 255, 255);
+  }
+    .text-container p {
+   margin: 20px;
+    margin-top: 20px; 
+    padding-left: 80px;
+    font-size: 16px; 
+    color: rgb(255, 255, 255);
+}
+
+.concolor {
+    background-color: #38b6ff;
+}
+ img {
+  max-width: 100%;
+ }
+
+.button-container {
+  text-align: center;
+}
+
+.animated-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.animated-button:hover {
+  transform: scale(1.1);
+  background-color: #38b6ff;
+}

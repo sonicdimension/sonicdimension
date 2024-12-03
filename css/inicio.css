@@ -1,0 +1,189 @@
+    .container2 {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  /* Formas con imágenes, más caóticas y animadas */
+  .shape {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    mix-blend-mode: screen;
+    animation: chaoticMovement 5s infinite ease-in-out, randomSize 4s infinite alternate ease-in-out;
+    opacity: 0.8;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Movimiento más caótico */
+  }
+  
+  /* Círculos con imágenes únicas */
+  .circle1 {
+    border-radius: 50%;
+    background-image: url('img/soniclive.jpg'); /* Reemplazar con tu primera imagen */
+    width: 150px;
+    height: 150px;
+    top: 15%;
+    left: 10%;
+    animation-delay: 0.5s;
+  }
+  
+  .circle2 {
+    border-radius: 50%;
+    background-image: url('img/soniclive.jpg'); /* Reemplazar con tu segunda imagen */
+    width: 100px;
+    height: 100px;
+    top: 60%;
+    left: 70%;
+    animation-delay: 1.5s;
+  }
+  
+  .circle3 {
+    border-radius: 50%;
+    background-image: url('img/22.jpg'); /* Reemplazar con tu tercera imagen */
+    width: 200px;
+    height: 200px;
+    top: 80%;
+    left: 30%;
+    animation-delay: 2s;
+  }
+  
+  /* Triángulos con imágenes únicas */
+  .triangle1 {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 150px solid transparent;
+    background-image: url('img/Imagen1.jpeg'); /* Reemplazar con tu primera imagen */
+    top: 5%;
+    left: 50%;
+    animation-delay: 1s;
+  }
+  
+  .triangle2 {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 150px solid transparent;
+    background-image: url('img/Imagen3.jpg'); /* Reemplazar con tu segunda imagen */
+    top: 65%;
+    left: 25%;
+    animation-delay: 2.5s;
+  }
+  
+  .triangle3 {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 150px solid transparent;
+    background-image: url('img/26.jpg'); /* Reemplazar con tu tercera imagen */
+    top: 30%;
+    left: 80%;
+    animation-delay: 0.8s;
+  }
+  
+  /* Cuadrados con imágenes únicas */
+  .square1 {
+    background-image: url('img/Imagen4.webp'); /* Reemplazar con tu primera imagen */
+    width: 150px;
+    height: 150px;
+    top: 40%;
+    left: 60%;
+    animation-delay: 0.2s;
+  }
+  
+  .square2 {
+    background-image: url('img/Imagen1.jpeg'); /* Reemplazar con tu segunda imagen */
+    width: 120px;
+    height: 120px;
+    top: 80%;
+    left: 15%;
+    animation-delay: 3s;
+  }
+  
+  .square3 {
+    background-image: url('img/Imagen3.jpg'); /* Reemplazar con tu tercera imagen */
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: 70%;
+    animation-delay: 4s;
+  }
+  
+  /* Elipses con imágenes únicas */
+  .ellipse1 {
+    border-radius: 50%;
+    background-image: url('img/Shadow.jpg'); /* Reemplazar con tu primera imagen */
+    width: 300px;
+    height: 150px;
+    top: 30%;
+    left: 75%;
+    animation-delay: 0.3s;
+  }
+  
+  .ellipse2 {
+    border-radius: 50%;
+    background-image: url('img/23.jpg'); /* Reemplazar con tu segunda imagen */
+    width: 250px;
+    height: 130px;
+    top: 70%;
+    left: 50%;
+    animation-delay: 5s;
+  }
+  
+  .ellipse3 {
+    border-radius: 50%;
+    background-image: url('img/Tails.png'); /* Reemplazar con tu tercera imagen */
+    width: 180px;
+    height: 90px;
+    top: 50%;
+    left: 10%;
+    animation-delay: 1.5s;
+  }
+  
+  /* Movimiento caótico */
+  @keyframes chaoticMovement {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+      opacity: 1;
+    }
+    25% {
+      transform: translate(150px, 100px) rotate(120deg);
+      opacity: 0.5;
+    }
+    50% {
+      transform: translate(-100px, -200px) rotate(240deg);
+      opacity: 0.9;
+    }
+    75% {
+      transform: translate(200px, -100px) rotate(360deg);
+      opacity: 0.6;
+    }
+    100% {
+      transform: translate(0, 0) rotate(480deg);
+      opacity: 1;
+    }
+  }
+  
+  /* Cambio de tamaño aleatorio */
+  @keyframes randomSize {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.5);
+    }
+  }
+
+  .imgsize {
+    width: 200px;
+  }
+
+  .imgsize2 {
+    width: 500px;
+  }

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Películas Vintage de Halloween</title>
+    <link rel="stylesheet" href="css/series1.css">
+    <link rel="stylesheet" href="css/series2.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <!-- Panel de controles de accesibilidad -->
+   <div class="accessibility-controls">
+    <!-- Control de tamaño de texto con slider -->
+    <div class="control-item">
+        <label for="text-size">📏 Tamaño de letra</label>
+        <input type="range" id="text-size" min="1" max="1.5" step="0.1" value="1" onchange="changeTextSize(this.value)">
+    </div>
+
+    <!-- Control de tamaño de imagen con slider -->
+    <div class="control-item">
+        <label for="image-size">🖼️ Tamaño de imagen</label>
+        <input type="range" id="image-size" min="200" max="400" step="50" value="200" onchange="changeImageSize(this.value)">
+    </div>
+
+    <!-- Control de filtro de color para daltonismo con efectos visuales -->
+    <div class="control-item">
+        <label for="color-filter">🎨 Filtro de color</label>
+        <select id="color-filter" onchange="applyColorFilter(this.value)">
+            <option value="none">Ninguno</option>
+            <option value="protanopia">Protanopia</option>
+            <option value="deuteranopia">Deuteranopia</option>
+            <option value="tritanopia">Tritanopia</option>
+        </select>
+    </div>
+
+    <!-- Control de regla de lectura -->
+    <div class="control-item">
+        <label for="reading-ruler">📚 Regla de lectura</label>
+        <button id="reading-ruler" onclick="toggleReadingRuler()">Activar</button>
+    </div>
+</div>
+
+
+    <header class="header w3-animate-top" aria-label="Encabezado principal">
+        <div class="container">
+            <img src="img/logo blanco.png" alt="Sonic Logo" class="logo">
+            <div class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="historia.html">Historia</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="personajes.html">Personajes</a>
+                <a href="redes del fandom.html">Redes del Fandom</a>
+            </div>
+            <div class="button-container">
+                <a href="galeria.html" class="animated-button">Volver</a>
+            </div>
+            </div>
+        <h1>Series & Peliculas</h1>
+        <p>Sumergete en la historia de Sonic a traves de su historia llevada a la televisión y el cine</p>
+    </header>
+
+    <section class="movie-gallery" aria-label="Galería de películas">
+        <article class="movie-card" aria-labelledby="titulo1">
+            <a href="https://www.netflix.com/bo/title/81172267">
+                <h2 id="titulo1">Sonic X</h2>
+                <p>2003</p>
+                <img src="img/SonicX.webp" alt="Póster de la película La Noche de los Muertos Vivientes de 1968, que muestra zombies acercándose" />
+            </a>
+        </article>
+        <article class="movie-card" aria-labelledby="titulo2">
+            <a href="https://www.netflix.com/bo/title/81294811">
+                <h2 id="titulo2">Sonic Prime</h2>
+                <p>2022</p>
+                <img src="img/primetv.webp" alt="Póster de Drácula de 1931, con Bela Lugosi interpretando a Drácula"/>
+            </a>
+        </article>
+        <article class="movie-card" aria-labelledby="titulo3">
+            <a href="https://www.netflix.com/bo/title/80217006">
+                <h2 id="titulo3">Sonic, la película</h2>
+                <p>2020</p>
+                <img src="img/sonicmov.jpeg" alt="Póster de Frankenstein de 1931, con Boris Karloff como el monstruo" />
+            </a>
+        </article>
+        <article class="movie-card" aria-labelledby="titulo4">
+            <a href="https://www.primevideo.com/-/es/detail/Sonic-2-La-Pel%C3%ADcula/0FQIAJN7YY0OVWEXB4SJSY3YUA">
+                <h2 id="titulo4">Sonic 2, la película</h2>
+                <p>2022</p>
+                <img src="img/sonic pelicula 2.webp" alt="Imagen de El Gabinete del Dr. Caligari de 1920, estilo expresionista alemán" />
+            </a>
+        </article>
+    </section>
+
+    <footer>
+        <div class="footer-container w3-animate-bottom">
+            <div class="footer-logo">
+                <img src="img/logo blanco.png" alt="tobylogo">
+            </div>
+            <div class="footer-links">
+                <a href="https://www.facebook.com/Sonic/" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/sonicthehedgehog/" target="_blank">Instagram</a>
+                <a href="mailto:dataprivacy@segaamerica.com">Contacto</a>
+            </div>
+            <p>&copy; 2024 SEGA. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+<!-- Regla de lectura -->
+<div id="reading-ruler-line"></div>
+
+<!-- JavaScript para controles de accesibilidad -->
+<script>
+    // Cambiar tamaño de texto en toda la página
+    function changeTextSize(value) {
+        document.documentElement.style.fontSize = `${value}em`;
+    }
+
+  // Cambiar tamaño de imagen
+function changeImageSize(value) {
+    const images = document.querySelectorAll('.movie-card img');
+    images.forEach(img => {
+        img.style.width = `${value}px`;
+    });
+}
+
+    // Aplicar filtro de color para daltonismo
+    function applyColorFilter(filter) {
+        document.body.style.filter = filter === 'none' ? '' : `url(#${filter})`;
+    }
+
+    // Activar o desactivar la regla de lectura
+    function toggleReadingRuler() {
+        const ruler = document.getElementById('reading-ruler-line');
+        ruler.style.display = ruler.style.display === 'block' ? 'none' : 'block';
+        document.addEventListener('mousemove', function(e) {
+            if (ruler.style.display === 'block') {
+                ruler.style.top = e.pageY + 'px';
+            }
+        });
+    }
+</script>
+
+<style>
+    /* Estilos de accesibilidad */
+    .accessibility-controls {
+        display: flex;
+        gap: 20px;
+        padding: 15px;
+        background: #f5f5f5;
+        border-bottom: 2px solid #ccc;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .control-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    .control-item label {
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .control-item input[type="range"], .control-item select, .control-item button {
+        width: 120px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        transition: all 0.3s;
+    }
+
+    .control-item button {
+        background-color: #4caf50;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .control-item button:hover {
+        background-color: #45a049;
+    }
+
+    /* Regla de lectura */
+    #reading-ruler-line {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        background-color: rgba(251, 255, 0, 0.479);
+        pointer-events: none;
+        z-index: 1000;
+        border-radius: 5px;
+        animation: fade 0.5s ease;
+    }
+
+    @keyframes fade {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    /* Filtros de color para daltonismo (SVG) */
+    svg {
+        display: none;
+    }
+</style>
+
+<!-- SVG Filters for Daltonism -->
+<svg xmlns="http://www.w3.org/2000/svg">
+    <filter id="protanopia">
+        <feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0, 0.558, 0.442, 0, 0, 0, 0, 0.242, 0.758, 0, 0, 0, 0, 1, 0"/>
+    </filter>
+    <filter id="deuteranopia">
+        <feColorMatrix type="matrix" values="0.625, 0.375, 0, 0, 0, 0.7, 0.3, 0, 0, 0, 0, 0.3, 0.7, 0, 0, 0, 0, 0, 1, 0"/>
+    </filter>
+    <filter id="tritanopia">
+        <feColorMatrix type="matrix" values="0.95, 0.05, 0, 0, 0, 0, 0.433, 0.567, 0, 0, 0, 0.475, 0.525, 0, 0, 0, 0, 0, 1, 0"/>
+    </filter>
+</svg>
+</body>
+</html>

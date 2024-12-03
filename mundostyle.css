@@ -1,0 +1,125 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+
+}
+
+p {
+    text-align: justify;
+    font-size: 15px;
+    margin: 0px 50px;
+}
+
+.navegacion {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    background-color: #e42717;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+.navegacion a {
+    padding: 15px 0px;
+}
+
+.seccion1 {
+    background-image: url(img/mundo3.jpg);
+}
+
+.seccion2 {
+    background-image: url(img/Futuro_de_Silver.webp);
+}
+
+.seccion3 {
+    background-image: url(img/sol.webp);
+}
+
+.seccion1,
+.seccion2,
+.seccion3 {
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.subseccion {
+    background-color: #38b6ff9a;
+    width: 500px;
+    height: 500px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+.centrar{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.icono {
+    width: 3em;
+    height: 3em;
+
+}
+
+.button-container {
+    text-align: center;
+  }
+  
+  .animated-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .animated-button:hover {
+    transform: scale(1.1);
+    background-color: #38b6ff;
+  }
+  .content {
+    background-color: #38b6ff; /* Fondo blanco para las secciones de contenido */
+    color: #333;
+    padding: 40px 20px;
+    min-height: 20vh; /* Para que no se vean vacías */
+    text-align: center;
+  }
+  
+  .content h2 {
+    font-size: 97px;
+    color: #ffffff; /* Rosa suave */
+  }
+  
+  .content p {
+    font-size: 20px;
+    color: #ffffff;
+  }
